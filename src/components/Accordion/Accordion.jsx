@@ -4,7 +4,6 @@ import {
 	Container,
 	Inner,
 	Title,
-	Frame,
 	Item,
 	Header,
 	Body
@@ -22,10 +21,6 @@ export default function Accordion({ children, ...restProps }) {
 
 Accordion.Title = function AccordionTitle({ children, ...restProps }) {
 	return <Title {...restProps}>{children}</Title>;
-};
-
-Accordion.Frame = function AccordionFrame({ children, ...restProps }) {
-	return <Frame {...restProps}>{children}</Frame>;
 };
 
 Accordion.Item = function AccordionItem({ children, ...restProps }) {

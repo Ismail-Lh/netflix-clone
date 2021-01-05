@@ -13,10 +13,6 @@ export const Inner = styled.div`
   margin: auto;
 `;
 
-export const Frame = styled.div`
-  margin-bottom: 40px;
-`;
-
 export const Title = styled.h1`
   font-size: 50px;
   line-height: 1.1;
