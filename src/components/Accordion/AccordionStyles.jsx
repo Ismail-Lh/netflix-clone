@@ -26,6 +26,10 @@ export const Title = styled.h1`
   }
 `;
 
+export const Frame = styled.div`
+  margin-bottom: 40px;
+`;
+
 export const Item = styled.div`
   color: white;
   margin: auto;
