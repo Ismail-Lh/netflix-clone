@@ -1,6 +1,7 @@
 import React from "react";
 
 import {
+	HeaderContainer,
 	JumbotronContainer,
 	FaqsContainer,
 	FooterContainer
@@ -9,6 +10,7 @@ import {
 const HomePage = props => {
 	return (
 		<>
+			<HeaderContainer />
 			<JumbotronContainer />
 			<FaqsContainer />
 			<FooterContainer />
