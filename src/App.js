@@ -1,14 +1,16 @@
-import JumbotronContainer from "./containers/JumbotronContainer";
-import FooterContainer from "./containers/FooterContainer";
-import FaqsContainer from './containers/FaqsContainer';
+import { Switch, Route } from "react-router-dom";
+
+import * as ROUTES from "./Routs";
+import { HomePage, BrowsePage, SignInPage, SignUpPage } from "./pages";
 
 function App() {
 	return (
-		<>
-			<JumbotronContainer />
-			<FaqsContainer/>
-			<FooterContainer />
-		</>
+		<Switch>
+			<Route exact path={ROUTES.HOME} render={() => <HomePage />} />
+			<Route exact path={ROUTES.BROWSE} render={() => <BrowsePage />} />
+			<Route exact path={ROUTES.SIGN_UP} render={() => <SignUpPage />} />
+			<Route exact path={ROUTES.SIGN_IN} render={() => <SignInPage />} />
+		</Switch>
 	);
 }
 

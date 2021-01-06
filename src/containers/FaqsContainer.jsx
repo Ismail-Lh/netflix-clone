@@ -1,7 +1,6 @@
 import React from "react";
 
-import Accordion from "../components/Accordion/Accordion";
-import GetStartedForm from "../components/GetStartedForm/GetStartedForm";
+import {Accordion, GetStartedForm} from "../components";
 import faqsData from "../fixtures/faqs.json";
 
 function FaqsContainer(props) {
