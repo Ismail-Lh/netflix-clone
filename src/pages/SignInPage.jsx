@@ -10,6 +10,7 @@ import { Form } from "../components";
 const SignInPage = props => {
 	const history = useHistory();
 	const { firebase } = useContext(FirebaseContext);
+
 	const [emailAddress, setEmailAddress] = useState("");
 	const [password, setPassword] = useState("");
 	const [error, setError] = useState("");
