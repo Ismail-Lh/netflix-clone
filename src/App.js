@@ -1,19 +1,11 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import { BrowserRouter as Router } from "react-router-dom";
 import { Switch, Route } from "react-router-dom";
 
 import * as ROUTES from "./Routs";
 import { HomePage, BrowsePage, SignInPage, SignUpPage } from "./pages";
-import {FirebaseContext} from './context/FirebaseContext';
 
 function App() {
-	const {firebase} = useContext(FirebaseContext);
-	firebase.firestore().collection('films').get().then((item) => {
-		item.docs.forEach((doc) => {
-			console.log(doc.data());
-		});
-
-	})
 	return (
 		<Router>
 		<Switch>
