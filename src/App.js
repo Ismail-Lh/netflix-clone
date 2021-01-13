@@ -4,11 +4,14 @@ import { Switch } from "react-router-dom";
 
 import * as ROUTES from "./Routs";
 import { IsUserRedirect, ProtectedRoute } from "./helpers/RoutesHelper";
+import { useAuthListener } from "./hooks";
 
 import { HomePage, BrowsePage, SignInPage, SignUpPage } from "./pages";
 
 function App() {
-	const user = null;
+	const { user } = useAuthListener();
+	console.log(user);
+
 	return (
 		<Router>
 			<Switch>
@@ -48,5 +51,3 @@ function App() {
 }
 
 export default App;
-
-// 3:09:48

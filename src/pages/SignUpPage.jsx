@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { useHistory } from "react-router-dom";
 
-import { FirebaseContext } from "../context/FirebaseContext";
+import { FirebaseContext } from "../context";
 import * as ROUTES from "../Routs";
 
 import { HeaderContainer, FooterContainer } from "../containers";
