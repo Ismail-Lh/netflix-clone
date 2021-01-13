@@ -10,7 +10,7 @@ import { HomePage, BrowsePage, SignInPage, SignUpPage } from "./pages";
 
 function App() {
 	const { user } = useAuthListener();
-	console.log(user);
+	//console.log(user);
 
 	return (
 		<Router>
