@@ -1,4 +1,5 @@
 export { default as Header } from "./Header/Header";
+export {default as Profiles} from './Profiles/Profiles';
 export {default as Feature} from "./Feature/Feature";
 export {default as Form} from "./Form/Form";
 export { default as Jumbotron } from "./Jumbotron/Jumbotron";
