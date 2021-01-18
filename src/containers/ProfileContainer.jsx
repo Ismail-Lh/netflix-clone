@@ -9,9 +9,9 @@ function ProfileContainer({ user, setProfile }) {
 	return (
 		<>
 			<Header bg={false}>
-				<Header.Frame>
+				<Header.Container>
 					<Header.Logo to={ROUTES.HOME} src={logo} alt="Netflix" />
-				</Header.Frame>
+				</Header.Container>
 			</Header>
 
 			<Profiles>
