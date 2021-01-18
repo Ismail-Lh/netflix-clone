@@ -5,4 +5,5 @@ export {default as Form} from "./Form/Form";
 export { default as Jumbotron } from "./Jumbotron/Jumbotron";
 export { default as Accordion } from "./Accordion/Accordion";
 export { default as GetStartedForm } from "./GetStartedForm/GetStartedForm";
+export {default as Loading} from "./Loading/Loading";
 export { default as Footer } from "./Footer/Footer";
