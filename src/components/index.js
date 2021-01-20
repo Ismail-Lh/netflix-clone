@@ -7,4 +7,5 @@ export { default as Accordion } from "./Accordion/Accordion";
 export { default as GetStartedForm } from "./GetStartedForm/GetStartedForm";
 export {default as Loading} from "./Loading/Loading";
 export {default as Card} from "./Card/Card";
+export {default as Player} from "./Player/Player";
 export { default as Footer } from "./Footer/Footer";

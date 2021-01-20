@@ -20,7 +20,7 @@ import {
 
 export const FeatureContext = createContext();
 
-export default function Card({ children, ...restProps }) {
+export default function Card ({ children, ...restProps }) {
 	const [showFeature, setShowFeature] = useState(false);
 	const [itemFeature, setItemFeature] = useState({});
 
@@ -33,27 +33,27 @@ export default function Card({ children, ...restProps }) {
 	);
 }
 
-Card.Group = function CardGroup({ children, ...restProps }) {
+Card.Group = function CardGroup ({ children, ...restProps }) {
 	return <Group {...restProps}>{children}</Group>;
 };
 
-Card.Title = function CardTitle({ children, ...restProps }) {
+Card.Title = function CardTitle ({ children, ...restProps }) {
 	return <Title {...restProps}>{children}</Title>;
 };
 
-Card.SubTitle = function CardSubTitle({ children, ...restProps }) {
+Card.SubTitle = function CardSubTitle ({ children, ...restProps }) {
 	return <SubTitle {...restProps}>{children}</SubTitle>;
 };
 
-Card.Text = function CardText({ children, ...restProps }) {
+Card.Text = function CardText ({ children, ...restProps }) {
 	return <Text {...restProps}>{children}</Text>;
 };
 
-Card.Meta = function CardMeta({ children, ...restProps }) {
+Card.Meta = function CardMeta ({ children, ...restProps }) {
 	return <Meta {...restProps}>{children}</Meta>;
 };
 
-Card.Item = function CardItem({ item, children, ...restProps }) {
+Card.Item = function CardItem ({ item, children, ...restProps }) {
 	const { setItemFeature, setShowFeature } = useContext(FeatureContext);
 
 	return (
@@ -69,22 +69,22 @@ Card.Item = function CardItem({ item, children, ...restProps }) {
 	);
 };
 
-Card.Entities = function CardEntities({ children, ...restProps }) {
+Card.Entities = function CardEntities ({ children, ...restProps }) {
 	return <Entities {...restProps}>{children}</Entities>;
 };
 
-Card.Image = function CardImage({ ...restProps }) {
+Card.Image = function CardImage ({ ...restProps }) {
 	return <Image {...restProps} />;
 };
 
-Card.Feature = function CardFeature({ category, children, ...restProps }) {
+Card.Feature = function CardFeature ({ category, children, ...restProps }) {
 	const { itemFeature, showFeature, setShowFeature } = useContext(
 		FeatureContext
 	);
 
 	return showFeature ? (
 		<Feature
-			src={`/images/${category}/${itemFeature.genre}/${itemFeature.sluge}/large.j`}
+			{...restProps} src={`/images/${category}/${itemFeature.genre}/${itemFeature.slug}/large.jpg`}
 		>
 			<FeatureContent>
 				<FeatureTitle>{itemFeature.title}</FeatureTitle>

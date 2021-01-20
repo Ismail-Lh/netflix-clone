@@ -5,8 +5,9 @@ import { FirebaseContext } from "../context";
 import * as ROUTES from "../Routs";
 
 import ProfileContainer from "./ProfileContainer";
+import FooterContainer from "./FooterContainer";
 
-import { Header, Loading, Card } from "../components";
+import { Header, Loading, Card, Player } from "../components";
 
 export default function BrowseContainer({ slides }) {
 	const [profile, setProfile] = useState({});
@@ -66,7 +67,7 @@ export default function BrowseContainer({ slides }) {
 									<Header.TextLink>{user.displayName}</Header.TextLink>
 								</Header.Group>
 								<Header.Group>
-									<Header.TextLink oClick={() => firebase.auth().signOut()}>
+									<Header.TextLink onClick={() => firebase.auth().signOut()}>
 										Sign out
 									</Header.TextLink>
 								</Header.Group>
@@ -108,11 +109,15 @@ export default function BrowseContainer({ slides }) {
 						</Card.Entities>
 
 						<Card.Feature category={category}>
-							<p>Hello world!!!!</p>
+							<Player>
+								<Player.Button />
+								<Player.Video src="/videos/bunny.mp4" />
+							</Player>
 						</Card.Feature>
 					</Card>
 				))}
 			</Card.Group>
+			<FooterContainer />
 		</>
 	) : (
 		<ProfileContainer user={user} setProfile={setProfile} />
