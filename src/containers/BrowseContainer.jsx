@@ -1,4 +1,5 @@
 import React, { useContext, useState, useEffect } from "react";
+import Fuse from "fuse.js";
 import logo from "../logo.svg";
 
 import { FirebaseContext } from "../context";
@@ -31,6 +32,19 @@ export default function BrowseContainer({ slides }) {
 	useEffect(() => {
 		setSlideRows(slides[category]);
 	}, [slides, category]);
+
+	useEffect(() => {
+		const fuse = new Fuse(slideRows, {
+			keys: ["data.title"]
+		});
+		const results = fuse.search(searchTerm).map(({ item }) => item);
+
+		if (slideRows.length > 0 && searchTerm.length > 3 && results.length > 0) {
+			setSlideRows(results);
+		} else {
+			setSlideRows(slides[category]);
+		}
+	}, [searchTerm]);
 
 	return profile.displayName ? (
 		<>
