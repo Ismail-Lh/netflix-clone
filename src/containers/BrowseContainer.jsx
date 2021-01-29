@@ -35,7 +35,7 @@ export default function BrowseContainer({ slides }) {
 
 	useEffect(() => {
 		const fuse = new Fuse(slideRows, {
-			keys: ["data.title"]
+			keys: ["data.title", "data.description", "data.genre"]
 		});
 		const results = fuse.search(searchTerm).map(({ item }) => item);
 
